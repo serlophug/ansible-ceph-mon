@@ -11,6 +11,9 @@
     - ceph_release_num[ceph_release] >= ceph_release_num.luminous
 
 - debug:
+    msg: "HOLAAAAAAAAAA"
+
+- debug:
     var: myres
 
 - name: collect admin and bootstrap keys
