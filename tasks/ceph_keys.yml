@@ -4,7 +4,7 @@
   #args:
   #  creates: /etc/ceph/{{ cluster }}.client.admin.keyring
   register: myres
-  changed_when: False
+  changed_when: "myres.rc == 0"
   check_mode: no
   when:
     - cephx
