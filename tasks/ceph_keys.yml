@@ -3,7 +3,8 @@
   command: ceph-create-keys --cluster {{ cluster }} -i {{ monitor_name }} -t 30
   #args:
   #  creates: /etc/ceph/{{ cluster }}.client.admin.keyring
-  changed_when: false
+  register: myres
+  changed_when: "myres.rc == 0"
   check_mode: no
   when:
     - cephx
